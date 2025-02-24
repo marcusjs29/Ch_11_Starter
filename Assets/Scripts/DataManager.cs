@@ -18,7 +18,7 @@ public class DataManager : MonoBehaviour, IManager
 
     public void Initialize()
     {
-        _state = "Data Manager initialized..";
+        _state = "Data Manager initialized.. Barley Garey";
         Debug.Log(_state);
     }
 }

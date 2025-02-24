@@ -33,7 +33,7 @@ public class GameBehavior : MonoBehaviour, IManager
 
     public void Initialize()
     {
-        _state = "Game Manager initialized..";
+        _state = "Game Manager initialized.. Charley Darwey";
         _state.FancyDebug();
         Debug.Log(_state);
     }
@@ -50,11 +50,11 @@ public class GameBehavior : MonoBehaviour, IManager
             if (_itemsCollected >= MaxItems)
             {
                 WinButton.gameObject.SetActive(true);
-                UpdateScene("You've found all the items!");
+                UpdateScene("That was the last item. You found all!");
             }
             else
             {
-                ProgressText.text = "Item found, only " + (MaxItems - _itemsCollected) + " more!";
+                ProgressText.text = "Item found, you only need " + (MaxItems - _itemsCollected) + " more!";
             }
         }
     }
@@ -76,7 +76,7 @@ public class GameBehavior : MonoBehaviour, IManager
             }
             else
             {
-                ProgressText.text = "Ouch... that's got hurt.";
+                ProgressText.text = "Greetings! Ouch...";
             }
 
             Debug.LogFormat("Lives: {0}", _playerHP);
